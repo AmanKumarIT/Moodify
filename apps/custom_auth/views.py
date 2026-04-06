@@ -1,7 +1,7 @@
 import json
 import bcrypt
 import jwt
-import datetime
+from datetime import *
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from utils.db import db
@@ -128,3 +128,9 @@ def me_view(request):
         return JsonResponse({"error": "Unauthorized"}, status=401)
         
     return JsonResponse({"user": payload}, status=200)
+
+def health_check(request):
+    return JsonResponse({
+        "status": "ok",
+        "time": datetime.utcnow().isoformat()
+    })
