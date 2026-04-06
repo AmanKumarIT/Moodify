@@ -1,7 +1,7 @@
 import json
 import bcrypt
 import jwt
-from datetime import *
+from datetime import datetime, timezone
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from utils.db import db
@@ -63,7 +63,7 @@ def login_view(request):
             return JsonResponse({"error": "Invalid credentials"}, status=401)
         
         # Generate JWT with integer expiration
-        exp_time = int(datetime.datetime.utcnow().timestamp()) + 86400
+        exp_time = int(datetime.now(timezone.utc).timestamp()) + 86400
         
         token = jwt.encode({
             "user_id": str(user["_id"]),
@@ -132,5 +132,5 @@ def me_view(request):
 def health_check(request):
     return JsonResponse({
         "status": "ok",
-        "time": datetime.utcnow().isoformat()
+        "time": datetime.now(timezone.utc).isoformat()
     })
