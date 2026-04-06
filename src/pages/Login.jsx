@@ -13,7 +13,7 @@ export default function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:8000/api/auth/login/', { email, password });
+      const res = await axios.post('https://moodify-oq6g.onrender.com/api/auth/login/', { email, password });
       login(res.data.token, res.data.username, res.data.user_id);
       navigate('/dashboard');
     } catch (err) {

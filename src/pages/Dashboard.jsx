@@ -20,7 +20,7 @@ export default function Dashboard() {
 
   const fetchHistory = useCallback(async () => {
     try {
-      const res = await axios.get('http://localhost:8000/api/playlist/history/', { headers: getHeaders() });
+      const res = await axios.get('https://moodify-oq6g.onrender.com/api/playlist/history/', { headers: getHeaders() });
       setHistory(res.data.history);
     } catch (e) {
       console.error('History fetch error', e);
@@ -29,7 +29,7 @@ export default function Dashboard() {
 
   const generatePlaylist = useCallback(async (detectedEmotion) => {
     try {
-      const res = await axios.post('http://localhost:8000/api/playlist/generate/', 
+      const res = await axios.post('https://moodify-oq6g.onrender.com/api/playlist/generate/', 
         { emotion: detectedEmotion }, 
         { headers: getHeaders() }
       );
@@ -49,7 +49,7 @@ export default function Dashboard() {
     if (!imageSrc) return;
 
     try {
-      const res = await axios.post('http://localhost:8000/api/emotion/predict/', 
+      const res = await axios.post('https://moodify-oq6g.onrender.com/api/emotion/predict/', 
         { image: imageSrc },
         { headers: getHeaders() }
       );

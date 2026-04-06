@@ -12,7 +12,7 @@ export default function Register() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:8000/api/auth/register/', { username, email, password });
+      await axios.post('https://moodify-oq6g.onrender.com/api/auth/register/', { username, email, password });
       navigate('/login');
     } catch (err) {
       setError(err.response?.data?.error || 'Registration failed');
