@@ -170,9 +170,6 @@ npm run preview
 
 ## 📄 License
 
-MIT License
-
----
 
 ## 👨‍💻 Author
 
