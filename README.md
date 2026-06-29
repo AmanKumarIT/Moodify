@@ -1,16 +1,179 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p align="center">
+  <h1 align="center">Moodify</h1>
+  <p align="center">
+    AI-Powered Mood-Based Playlist Generator Frontend
+  </p>
+</p>
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 📖 Overview
 
-## React Compiler
+Moodify is an AI-powered web application that analyzes a user's facial expression to detect their current mood and automatically recommends personalized Spotify playlists.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+This repository contains the **React frontend**, responsible for the user interface, webcam integration, mood visualization, playlist display, and communication with the backend API.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ✨ Features
+
+* 🎥 Webcam Integration
+* 😊 Real-Time Mood Detection
+* 🎵 Spotify Playlist Recommendations
+* 📱 Responsive Design
+* ⚡ Fast React UI
+* 🔄 API Integration
+* 🎨 Modern User Interface
+* 🌙 Clean & Minimal Design
+
+---
+
+## 🛠 Tech Stack
+
+* React.js
+* Vite
+* JavaScript
+* Tailwind CSS
+* Axios
+* React Router DOM
+
+---
+
+## 📂 Project Structure
+
+```text
+src/
+│
+├── assets/
+├── components/
+├── pages/
+├── hooks/
+├── services/
+├── utils/
+├── App.jsx
+├── main.jsx
+└── index.css
+```
+
+---
+
+## ⚙️ Environment Variables
+
+Create a `.env` file.
+
+```env
+VITE_API_URL=http://localhost:5000/api
+```
+
+---
+
+## 🚀 Installation
+
+Clone the repository
+
+```bash
+git clone https://github.com/yourusername/moodify-frontend.git
+```
+
+Install dependencies
+
+```bash
+npm install
+```
+
+Run development server
+
+```bash
+npm run dev
+```
+
+---
+
+## 📡 Backend Connection
+
+The frontend communicates with the backend through REST APIs.
+
+Example:
+
+```text
+POST /api/mood/detect
+```
+
+---
+
+## 📱 Features Implemented
+
+* Webcam Capture
+* Mood Detection Interface
+* Playlist Recommendation Page
+* Loading Animations
+* Error Handling
+* API Integration
+
+---
+
+## 📸 Workflow
+
+```text
+User Opens Website
+        │
+        ▼
+Allow Webcam Access
+        │
+        ▼
+Capture Face Image
+        │
+        ▼
+Send Image to Backend
+        │
+        ▼
+Receive Mood Prediction
+        │
+        ▼
+Display Spotify Playlists
+```
+
+---
+
+## 📦 Build
+
+Development
+
+```bash
+npm run dev
+```
+
+Production
+
+```bash
+npm run build
+```
+
+Preview
+
+```bash
+npm run preview
+```
+
+---
+
+## 🤝 Contributing
+
+1. Fork Repository
+2. Create Feature Branch
+3. Commit Changes
+4. Push Changes
+5. Open Pull Request
+
+---
+
+## 📄 License
+
+MIT License
+
+---
+
+## 👨‍💻 Author
+
+Developed as part of the **Moodify** AI Playlist Recommendation project.
